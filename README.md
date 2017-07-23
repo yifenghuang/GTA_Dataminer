@@ -15,6 +15,7 @@ GTA, 从Steam获取。安装后还需要安装social club
 
 [RenderDoc](https://renderdoc.org/), 
 用于帧采集, 直接安装即可
+公版可能无法满足开发需求，在play for data中，使用了一个修改版本的rendendoc来配合他们的脚本
 
 [Script Hook V](http://www.dev-c.com/gtav/scripthookv/), 
 GTA脚本编辑库，实现摄像头参数调节、位置安放和多个固定视角的切换等功能. 要实现脚本编辑需要下载[Script Hook V SDK](http://www.dev-c.com/files/ScriptHookV_SDK_1.0.617.1a.zip)，将bin文件夹下的三个文件扔到游戏目录中即可
