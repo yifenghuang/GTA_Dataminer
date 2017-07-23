@@ -9,6 +9,7 @@
 [image7]: ./RD5.jpg
 
 ##1. 软件安装
+
 GTA, 从Steam获取。安装后还需要安装social club
 在安装大量补丁之后不要进入多人模式，否则可能被封号！
 
@@ -31,6 +32,7 @@ GTA文件存储在很多很多.rpf中，OpenIV可以访问并修改存在.rpf中
 然后就可以看到封装到.rpf中的文件了，如果要修改，需要进入Edit mode
 
 ##2. 帧采集
+
 首先打开RenderDoc,进入capture executable页面，路径写steam.exe的路径，Working Directory会自动生成。然后勾选下边的Hook Into，这样软件就可以监测由steam launch的一切进程了
 ![image3]
 然后点击右下角的launch，进入steam，打开GTA5，当屏幕左上方出现一行小字，说明可以开始捕获帧了。
@@ -44,8 +46,12 @@ GTA文件存储在很多很多.rpf中，OpenIV可以访问并修改存在.rpf中
 ![image7]
 
 ##3. 参考代码库
+
 1:[playing for data](https://download.visinf.tu-darmstadt.de/data/from_games/index.html) 这是之前那篇paper的主页，标记过程，[源代码在这里](https://bitbucket.org/visinf/projects-2016-playing-for-data)
 
 2:[RD作者写的在fram中提取图片的script，使用Renderdoc python shell](https://gist.github.com/baldurk/53aeecbc94150438477a09e9f49d9a41)
+
 ##4. 工程详细结构
+
 ##5. 开发流程规划
+
