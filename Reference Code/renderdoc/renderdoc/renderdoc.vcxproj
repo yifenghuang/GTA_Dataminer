@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Win32">
+      <Configuration>Profile</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|x64">
+      <Configuration>Profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E2B46D67-90E2-40B6-9597-72930E7845E5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>renderdoc</RootNamespace>
+    <ProjectName>renderdoc</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(ProgramFiles)\Windows Kits\8.1\Debuggers\inc;$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(VSInstallDir)\DIA SDK\include;$(SolutionDir)\breakpad;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProgramFiles)\Windows Kits\8.1\lib\win8\um\x86;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ProgramFiles)\Windows Kits\8.1\bin\x86;$(ExecutablePath)</ExecutablePath>
+    <ExcludePath>$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(ExcludePath)</ExcludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(ProgramFiles)\Windows Kits\8.1\Debuggers\inc;$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(VSInstallDir)\DIA SDK\include;$(SolutionDir)\breakpad;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProgramFiles)\Windows Kits\8.1\lib\win8\um\x86;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ProgramFiles)\Windows Kits\8.1\bin\x86;$(ExecutablePath)</ExecutablePath>
+    <ExcludePath>$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(ExcludePath)</ExcludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(ProgramFiles)\Windows Kits\8.1\Debuggers\inc;$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(VSInstallDir)\DIA SDK\include;$(SolutionDir)\breakpad;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProgramFiles)\Windows Kits\8.1\lib\win8\um\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ProgramFiles)\Windows Kits\8.1\bin;$(ExecutablePath)</ExecutablePath>
+    <ExcludePath>$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(ProgramFiles)\Windows Kits\8.1\Debuggers\inc;$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(VSInstallDir)\DIA SDK\include;$(SolutionDir)\breakpad;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProgramFiles)\Windows Kits\8.1\lib\win8\um\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ProgramFiles)\Windows Kits\8.1\bin;$(ExecutablePath)</ExecutablePath>
+    <ExcludePath>$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(ProgramFiles)\Windows Kits\8.1\Debuggers\inc;$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(VSInstallDir)\DIA SDK\include;$(SolutionDir)\breakpad;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProgramFiles)\Windows Kits\8.1\lib\win8\um\x86;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ProgramFiles)\Windows Kits\8.1\bin\x86;$(ExecutablePath)</ExecutablePath>
+    <ExcludePath>$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(ExcludePath)</ExcludePath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(ProgramFiles)\Windows Kits\8.1\Debuggers\inc;$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(VSInstallDir)\DIA SDK\include;$(SolutionDir)\breakpad;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProgramFiles)\Windows Kits\8.1\lib\win8\um\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ProgramFiles)\Windows Kits\8.1\bin;$(ExecutablePath)</ExecutablePath>
+    <ExcludePath>$(ProgramFiles)\Windows Kits\8.1\Include\um;$(ProgramFiles)\Windows Kits\8.1\Include\shared;$(ExcludePath)</ExcludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>RENDERDOC_EXPORTS;RENDERDOC_PLATFORM=win32;USE_BREAKPAD;WIN32;RELEASE;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4189</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)renderdoc\3rdparty\</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>$(ProjectDir)os\win32\comexport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\breakpad_common.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\crash_generation_client.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\exception_handler.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;psapi.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>RENDERDOC_EXPORTS;RENDERDOC_PLATFORM=win32;USE_BREAKPAD;WIN32;RELEASE;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4189</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)renderdoc\3rdparty\</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>$(ProjectDir)os\win32\comexport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\breakpad_common.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\crash_generation_client.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\exception_handler.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;psapi.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>RENDERDOC_EXPORTS;RENDERDOC_PLATFORM=win32;USE_BREAKPAD;WIN64;WIN32;RELEASE;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4189</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)renderdoc\3rdparty\;$(SolutionDir)renderdoc\3rdparty\openexr\OpenEXR\IlmImf;$(SolutionDir)renderdoc\3rdparty\openexr\OpenEXR\build\config;$(SolutionDir)renderdoc\3rdparty\zlib;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Imath;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Half;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Iex;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\IexMath;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\IlmThread;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\config.windows</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>$(ProjectDir)os\win32\comexport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\breakpad_common.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\crash_generation_client.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\exception_handler.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\OpenEXR\build\IlmImf\$(Configuration)\IlmImf.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Half\$(Configuration)\Half.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Iex\$(Configuration)\Iex.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Imath\$(Configuration)\Imath.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\IlmThread\$(Configuration)\IlmThread.lib;$(SolutionDir)\renderdoc\3rdparty\zlib\build\$(Configuration)\zlib.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;psapi.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>RENDERDOC_EXPORTS;RENDERDOC_PLATFORM=win32;USE_BREAKPAD;WIN64;WIN32;DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4189</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)renderdoc\3rdparty\;$(SolutionDir)renderdoc\3rdparty\openexr\OpenEXR\IlmImf;$(SolutionDir)renderdoc\3rdparty\openexr\OpenEXR\build\config;$(SolutionDir)renderdoc\3rdparty\zlib;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Imath;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Half;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Iex;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\IexMath;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\IlmThread;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\config.windows</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <ModuleDefinitionFile>$(ProjectDir)os\win32\comexport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\breakpad_common.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\crash_generation_client.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\exception_handler.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\OpenEXR\build\IlmImf\$(Configuration)\IlmImf.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Half\$(Configuration)\Half.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Iex\$(Configuration)\Iex.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Imath\$(Configuration)\Imath.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\IlmThread\$(Configuration)\IlmThread.lib;$(SolutionDir)\renderdoc\3rdparty\zlib\build\$(Configuration)\zlib.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;psapi.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>RENDERDOC_EXPORTS;RENDERDOC_PLATFORM=win32;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4189</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)renderdoc\3rdparty\</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PreprocessToFile>false</PreprocessToFile>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <ModuleDefinitionFile>$(ProjectDir)os\win32\comexport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;psapi.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>RENDERDOC_EXPORTS;RENDERDOC_PLATFORM=win32;WIN64;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalOptions>/wd4100 /wd4127 /wd4189</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)renderdoc\3rdparty\;$(SolutionDir)renderdoc\3rdparty\openexr\OpenEXR\IlmImf;$(SolutionDir)renderdoc\3rdparty\openexr\OpenEXR\build\config;$(SolutionDir)renderdoc\3rdparty\zlib;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Imath;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Half;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\Iex;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\IexMath;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\IlmThread;$(SolutionDir)renderdoc\3rdparty\openexr\IlmBase\config.windows</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <ModuleDefinitionFile>$(ProjectDir)os\win32\comexport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\breakpad_common.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\crash_generation_client.lib;$(SolutionDir)\renderdoc\3rdparty\breakpad\$(Platform)\$(Configuration)\exception_handler.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\OpenEXR\build\IlmImf\$(Configuration)\IlmImf.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Half\$(Configuration)\Half.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Iex\$(Configuration)\Iex.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\Imath\$(Configuration)\Imath.lib;$(SolutionDir)\renderdoc\3rdparty\openexr\IlmBase\build\IlmThread\$(Configuration)\IlmThread.lib;$(SolutionDir)\renderdoc\3rdparty\zlib\build\$(Configuration)\zlib.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;psapi.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdparty\jpeg-compressor\jpgd.h" />
+    <ClInclude Include="3rdparty\jpeg-compressor\jpge.h" />
+    <ClInclude Include="3rdparty\lz4\lz4.h" />
+    <ClInclude Include="3rdparty\stb\stb_image.h" />
+    <ClInclude Include="3rdparty\stb\stb_image_write.h" />
+    <ClInclude Include="3rdparty\stb\stb_truetype.h" />
+    <ClInclude Include="3rdparty\tinyexr\tinyexr.h" />
+    <ClInclude Include="api\app\renderdoc_app.h" />
+    <ClInclude Include="api\replay\basic_types.h" />
+    <ClInclude Include="api\replay\capture_options.h" />
+    <ClInclude Include="api\replay\control_types.h" />
+    <ClInclude Include="api\replay\d3d11_pipestate.h" />
+    <ClInclude Include="api\replay\data_types.h" />
+    <ClInclude Include="api\replay\gl_pipestate.h" />
+    <ClInclude Include="api\replay\renderdoc_replay.h" />
+    <ClInclude Include="api\replay\replay_enums.h" />
+    <ClInclude Include="api\replay\shader_types.h" />
+    <ClInclude Include="common\common.h" />
+    <ClInclude Include="common\dds_readwrite.h" />
+    <ClInclude Include="common\globalconfig.h" />
+    <ClInclude Include="common\threading.h" />
+    <ClInclude Include="common\timing.h" />
+    <ClInclude Include="common\wrapped_pool.h" />
+    <ClInclude Include="core\core.h" />
+    <ClInclude Include="core\crash_handler.h" />
+    <ClInclude Include="core\replay_proxy.h" />
+    <ClInclude Include="core\resource_manager.h" />
+    <ClInclude Include="core\socket_helpers.h" />
+    <ClInclude Include="data\embedded_files.h" />
+    <ClInclude Include="data\glsl\debuguniforms.h" />
+    <ClInclude Include="data\glsl\texsample.h" />
+    <ClInclude Include="data\hlsl\debugcbuffers.h" />
+    <ClInclude Include="data\resource.h" />
+    <ClInclude Include="data\version.h" />
+    <ClInclude Include="hooks\hooks.h" />
+    <ClInclude Include="maths\camera.h" />
+    <ClInclude Include="maths\formatpacking.h" />
+    <ClInclude Include="maths\half_convert.h" />
+    <ClInclude Include="maths\matrix.h" />
+    <ClInclude Include="maths\quat.h" />
+    <ClInclude Include="maths\vec.h" />
+    <ClInclude Include="os\linux_specific.h" />
+    <ClInclude Include="os\os_specific.h" />
+    <ClInclude Include="os\win32\win32_hook.h" />
+    <ClInclude Include="os\win32_specific.h" />
+    <ClInclude Include="replay\MurmurHash3.h" />
+    <ClInclude Include="replay\replay_driver.h" />
+    <ClInclude Include="replay\replay_renderer.h" />
+    <ClInclude Include="replay\type_helpers.h" />
+    <ClInclude Include="serialise\serialiser.h" />
+    <ClInclude Include="serialise\string_utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3rdparty\jpeg-compressor\jpgd.cpp" />
+    <ClCompile Include="3rdparty\jpeg-compressor\jpge.cpp" />
+    <ClCompile Include="3rdparty\lz4\lz4.c" />
+    <ClCompile Include="3rdparty\stb\stb_impl.c" />
+    <ClCompile Include="3rdparty\tinyexr\tinyexr.cpp" />
+    <ClCompile Include="common\common.cpp" />
+    <ClCompile Include="common\dds_readwrite.cpp" />
+    <ClCompile Include="core\core.cpp" />
+    <ClCompile Include="core\image_viewer.cpp" />
+    <ClCompile Include="core\remote_access.cpp" />
+    <ClCompile Include="core\remote_replay.cpp" />
+    <ClCompile Include="core\replay_proxy.cpp" />
+    <ClCompile Include="core\resource_manager.cpp" />
+    <ClCompile Include="hooks\hooks.cpp" />
+    <ClCompile Include="maths\camera.cpp" />
+    <ClCompile Include="maths\matrix.cpp" />
+    <ClCompile Include="os\linux\linux_callstack.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_hook.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_libentry.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_network.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_process.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_stringio.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_threading.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="os\os_specific.cpp" />
+    <ClCompile Include="os\win32\sys_win32_hooks.cpp" />
+    <ClCompile Include="os\win32\win32_callstack.cpp" />
+    <ClCompile Include="os\win32\win32_hook.cpp" />
+    <ClCompile Include="os\win32\win32_libentry.cpp" />
+    <ClCompile Include="os\win32\win32_network.cpp" />
+    <ClCompile Include="os\win32\win32_process.cpp" />
+    <ClCompile Include="os\win32\win32_shellext.cpp" />
+    <ClCompile Include="os\win32\win32_stringio.cpp" />
+    <ClCompile Include="os\win32\win32_threading.cpp" />
+    <ClCompile Include="replay\app_api.cpp" />
+    <ClCompile Include="replay\capture_options.cpp" />
+    <ClCompile Include="replay\entry_points.cpp" />
+    <ClCompile Include="replay\MurmurHash3.cpp" />
+    <ClCompile Include="replay\replay_output.cpp" />
+    <ClCompile Include="replay\replay_renderer.cpp" />
+    <ClCompile Include="replay\type_helpers.cpp" />
+    <ClCompile Include="serialise\grisu2.cpp" />
+    <ClCompile Include="serialise\serialiser.cpp" />
+    <ClCompile Include="serialise\string_utils.cpp" />
+    <ClCompile Include="serialise\utf8printf.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="data\renderdoc.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\glsl\arraymscopy.comp" />
+    <None Include="data\glsl\blit.frag" />
+    <None Include="data\glsl\blit.vert" />
+    <None Include="data\glsl\checkerboard.frag" />
+    <None Include="data\glsl\generic.frag" />
+    <None Include="data\glsl\generic.vert" />
+    <None Include="data\glsl\histogram.comp" />
+    <None Include="data\glsl\mesh.comp" />
+    <None Include="data\glsl\mesh.frag" />
+    <None Include="data\glsl\mesh.geom" />
+    <None Include="data\glsl\mesh.vert" />
+    <None Include="data\glsl\outline.frag" />
+    <None Include="data\glsl\quadoverdraw.frag" />
+    <None Include="data\glsl\texdisplay.frag" />
+    <None Include="data\glsl\text.frag" />
+    <None Include="data\glsl\text.vert" />
+    <None Include="data\hlsl\debugcommon.hlsl" />
+    <None Include="data\hlsl\debugdisplay.hlsl" />
+    <None Include="data\hlsl\debugtext.hlsl" />
+    <None Include="data\hlsl\histogram.hlsl" />
+    <None Include="data\hlsl\mesh.hlsl" />
+    <None Include="data\hlsl\multisample.hlsl" />
+    <None Include="os\win32\comexport.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="driver\d3d11\renderdoc_d3d11.vcxproj">
+      <Project>{f1e59a05-60d4-4927-9e57-dd191eae90ef}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="driver\dxgi\renderdoc_dxgi.vcxproj">
+      <Project>{2a793574-bd3c-46d4-9788-c339d9550ce1}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="driver\gl\renderdoc_gl.vcxproj">
+      <Project>{f92fcda6-a261-4eec-9cd0-73a11fbcc459}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

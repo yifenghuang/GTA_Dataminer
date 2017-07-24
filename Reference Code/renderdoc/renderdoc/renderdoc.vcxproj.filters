@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{97bbc5c9-b6a8-429b-a2d6-16fea62eed1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Serialise">
+      <UniqueIdentifier>{ff594035-e059-4ceb-a85c-ec4dbc83d029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Replay">
+      <UniqueIdentifier>{205098b7-5360-41d3-b186-6fe15b1b4e4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{c1ae2bd1-c932-42f6-8997-a4553322bdfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Maths">
+      <UniqueIdentifier>{0e2454ca-656b-499c-bb19-07cf1da7e703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{a9a0e0ca-e0e6-4ebb-a21e-f971943c46ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS">
+      <UniqueIdentifier>{ffbf4a4f-115e-415f-a800-b372db445027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS\Win32">
+      <UniqueIdentifier>{6308ad7d-d930-4fed-9d4b-68bb66b29a78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty">
+      <UniqueIdentifier>{36ccf267-d6c1-41c9-87c3-92c1dfcbe88b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\networking">
+      <UniqueIdentifier>{1d17fb69-fd1a-44a6-a530-05642d97ddc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\hlsl">
+      <UniqueIdentifier>{0ecdcd74-a30b-457e-8b22-92bd58405c56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\glsl">
+      <UniqueIdentifier>{889cc549-e49b-430b-9e9b-5a42e7c26b03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API">
+      <UniqueIdentifier>{7d6b0f22-1180-4767-b284-cc87f54ec012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Replay">
+      <UniqueIdentifier>{4e047f61-a78b-4a09-abbb-6c839a4fe177}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\In-App">
+      <UniqueIdentifier>{188b97fd-b9d4-47a6-a51a-48bc00e6fc5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\File Formats">
+      <UniqueIdentifier>{eb0686f4-bcb3-4edd-b488-937b1491909b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\stb">
+      <UniqueIdentifier>{5f5e3b49-5091-4a26-b24b-723ebb95ba78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\jpeg-compressor">
+      <UniqueIdentifier>{d7a4190d-f68a-4e08-877f-04be35995e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\lz4">
+      <UniqueIdentifier>{043f5a32-683e-4b56-bcc6-512444b40d70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Strings">
+      <UniqueIdentifier>{ce0b860f-38b7-48af-b49d-7dcb23378f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\tinyexr">
+      <UniqueIdentifier>{aadadb32-abbc-45b3-8f86-026eed994ba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS\Linux">
+      <UniqueIdentifier>{5168e1dc-8d41-4aff-b99c-1ffa2af33f95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooks">
+      <UniqueIdentifier>{3e51a921-b167-4794-937d-e77573a928b8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="maths\camera.h">
+      <Filter>Common\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="maths\matrix.h">
+      <Filter>Common\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="maths\quat.h">
+      <Filter>Common\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="serialise\serialiser.h">
+      <Filter>Common\Serialise</Filter>
+    </ClInclude>
+    <ClInclude Include="data\resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\hooks.h">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\globalconfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\wrapped_pool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="maths\vec.h">
+      <Filter>Common\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="common\threading.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\timing.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="os\os_specific.h">
+      <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="os\win32_specific.h">
+      <Filter>OS\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="core\resource_manager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="maths\formatpacking.h">
+      <Filter>Common\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="core\socket_helpers.h">
+      <Filter>Core\networking</Filter>
+    </ClInclude>
+    <ClInclude Include="core\replay_proxy.h">
+      <Filter>Core\networking</Filter>
+    </ClInclude>
+    <ClInclude Include="core\crash_handler.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="replay\type_helpers.h">
+      <Filter>Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="replay\replay_driver.h">
+      <Filter>Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="replay\replay_renderer.h">
+      <Filter>Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="core\core.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="maths\half_convert.h">
+      <Filter>Common\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="data\hlsl\debugcbuffers.h">
+      <Filter>Resources\hlsl</Filter>
+    </ClInclude>
+    <ClInclude Include="data\glsl\debuguniforms.h">
+      <Filter>Resources\glsl</Filter>
+    </ClInclude>
+    <ClInclude Include="os\win32\win32_hook.h">
+      <Filter>OS\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="data\version.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\basic_types.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\control_types.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\d3d11_pipestate.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\data_types.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\gl_pipestate.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\replay_enums.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\shader_types.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="api\app\renderdoc_app.h">
+      <Filter>API\In-App</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\renderdoc_replay.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dds_readwrite.h">
+      <Filter>Common\File Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdparty\jpeg-compressor\jpge.h">
+      <Filter>3rdparty\jpeg-compressor</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdparty\jpeg-compressor\jpgd.h">
+      <Filter>3rdparty\jpeg-compressor</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdparty\lz4\lz4.h">
+      <Filter>3rdparty\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdparty\stb\stb_image.h">
+      <Filter>3rdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdparty\stb\stb_image_write.h">
+      <Filter>3rdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdparty\stb\stb_truetype.h">
+      <Filter>3rdparty\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="data\glsl\texsample.h">
+      <Filter>Resources\glsl</Filter>
+    </ClInclude>
+    <ClInclude Include="serialise\string_utils.h">
+      <Filter>Common\Strings</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdparty\tinyexr\tinyexr.h">
+      <Filter>3rdparty\tinyexr</Filter>
+    </ClInclude>
+    <ClInclude Include="os\linux_specific.h">
+      <Filter>OS\Linux</Filter>
+    </ClInclude>
+    <ClInclude Include="data\embedded_files.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="api\replay\capture_options.h">
+      <Filter>API\Replay</Filter>
+    </ClInclude>
+    <ClInclude Include="replay\MurmurHash3.h">
+      <Filter>Replay</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="maths\camera.cpp">
+      <Filter>Common\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="maths\matrix.cpp">
+      <Filter>Common\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="serialise\serialiser.cpp">
+      <Filter>Common\Serialise</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\hooks.cpp">
+      <Filter>Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_callstack.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_process.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_specific.cpp">
+      <Filter>OS</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_threading.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_stringio.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\resource_manager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_shellext.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_network.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\remote_access.cpp">
+      <Filter>Core\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="core\remote_replay.cpp">
+      <Filter>Core\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="core\replay_proxy.cpp">
+      <Filter>Core\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="replay\type_helpers.cpp">
+      <Filter>Replay</Filter>
+    </ClCompile>
+    <ClCompile Include="replay\entry_points.cpp">
+      <Filter>Replay</Filter>
+    </ClCompile>
+    <ClCompile Include="replay\replay_output.cpp">
+      <Filter>Replay</Filter>
+    </ClCompile>
+    <ClCompile Include="replay\replay_renderer.cpp">
+      <Filter>Replay</Filter>
+    </ClCompile>
+    <ClCompile Include="core\core.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_hook.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="common\dds_readwrite.cpp">
+      <Filter>Common\File Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\jpeg-compressor\jpge.cpp">
+      <Filter>3rdparty\jpeg-compressor</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\jpeg-compressor\jpgd.cpp">
+      <Filter>3rdparty\jpeg-compressor</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\lz4\lz4.c">
+      <Filter>3rdparty\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\stb\stb_impl.c">
+      <Filter>3rdparty\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="core\image_viewer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="serialise\grisu2.cpp">
+      <Filter>Common\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="serialise\utf8printf.cpp">
+      <Filter>Common\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="serialise\string_utils.cpp">
+      <Filter>Common\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\tinyexr\tinyexr.cpp">
+      <Filter>3rdparty\tinyexr</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\win32_libentry.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_callstack.cpp">
+      <Filter>OS\Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_network.cpp">
+      <Filter>OS\Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_hook.cpp">
+      <Filter>OS\Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_process.cpp">
+      <Filter>OS\Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_stringio.cpp">
+      <Filter>OS\Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_threading.cpp">
+      <Filter>OS\Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="os\linux\linux_libentry.cpp">
+      <Filter>OS\Linux</Filter>
+    </ClCompile>
+    <ClCompile Include="os\win32\sys_win32_hooks.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="replay\app_api.cpp">
+      <Filter>API\In-App</Filter>
+    </ClCompile>
+    <ClCompile Include="replay\capture_options.cpp">
+      <Filter>Replay</Filter>
+    </ClCompile>
+    <ClCompile Include="replay\MurmurHash3.cpp">
+      <Filter>Replay</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="os\win32\comexport.def">
+      <Filter>OS\Win32</Filter>
+    </None>
+    <None Include="data\hlsl\debugcommon.hlsl">
+      <Filter>Resources\hlsl</Filter>
+    </None>
+    <None Include="data\hlsl\debugdisplay.hlsl">
+      <Filter>Resources\hlsl</Filter>
+    </None>
+    <None Include="data\hlsl\debugtext.hlsl">
+      <Filter>Resources\hlsl</Filter>
+    </None>
+    <None Include="data\hlsl\histogram.hlsl">
+      <Filter>Resources\hlsl</Filter>
+    </None>
+    <None Include="data\hlsl\multisample.hlsl">
+      <Filter>Resources\hlsl</Filter>
+    </None>
+    <None Include="data\glsl\blit.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\blit.vert">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\texdisplay.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\checkerboard.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\generic.vert">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\generic.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\mesh.vert">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\text.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\text.vert">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\histogram.comp">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\mesh.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\mesh.geom">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\arraymscopy.comp">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\quadoverdraw.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\hlsl\mesh.hlsl">
+      <Filter>Resources\hlsl</Filter>
+    </None>
+    <None Include="data\glsl\mesh.comp">
+      <Filter>Resources\glsl</Filter>
+    </None>
+    <None Include="data\glsl\outline.frag">
+      <Filter>Resources\glsl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="data\renderdoc.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
